@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<!--This uses inline scripting and inline styling. It can be tested in normal ways. It is the I Love you message for Valententine's Day.-->>
+<body style="background-color: #3f3438;">
+    <!--a beatutiful text wishing you happy valentines day.-->>
+    <div class="div1" style="background-color: #E93333; width: 230px; height: 40px; margin: auto; border-radius: 5px; position: absolute; top: 10%; left: 50%; transform: translate(-50%, -50%);">
+        <button style="font-family: Arial, Helvetica, sans-serif; font-size: 1.2rem; width: 228px; height: 38px; margin: 1px 1px; border-radius: 5px; background-color: #460202; color: white; background: linear-gradient(to right, rgb(4, 65, 39), rgb(100, 2, 2));">
+            Happy Valentines's Day!
+        </button>
+    </div>
+   <!-- A place to display the message one at a time-->
+    <div id="messageBox" style ="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); border: 1px solid black; background-color:rgb(39, 13, 1); color: white; border-radius: 10px; padding: 30px;">
+    </div>
+    <script>
+        
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the message box element
+    const messageBox = document.getElementById('messageBox');
+    
+    // Define the message text
+    const messageText = "If I slow down please click the button above.\n888888888888888888888888888888888888888888888888888888888888888888888888888888888888\n888888888888888888888888888888888888888888888888888888888888888888888888888888888888\n8888_________________888888888888_88888888888888888_88888888888____8888888888____888\n8888_________________8888888888_______888888888_________8888888____8888888888____888\n88888888888____88888888888888___________88888_____________88888____8888888888____888\n88888888888____8888888888888_____________888_______________8888____8888888888____888\n88888888888____8888888888888______________8________________8888____8888888888____888\n88888888888____8888888888888_______________________________8888____8888888888____888\n88888888888____88888888888888_____________________________88888____8888888888____888\n88888888888____888888888888888___________________________888888____8888888888____888\n8888_________________888888888888_____________________888888888__________________888\n8888_________________8888888888888888_____________8888888888888__________________888\n8888888888888888888888888888888888888888888_8888888888888888888888888888888888888888\n888888888888888888888888888888888888888888888888888888888888888888888888888888888888\nHave a good day!";
+    let index = 0;
+    
+    //Add one letter at a time on the screen
+    const interval = setInterval(() => {
+      
+      if (index < messageText.length) {
+        
+        messageBox.textContent += messageText[index];
+      
+        index++;
+      } else {
+        
+        clearInterval(interval);
+      }
+    }, 0.1);
+    setTimeout(() => {
+      clearInterval(interval);
+    }, 50000);
+  });
+  
+    </script>
+</body>
+</html>
